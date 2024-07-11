@@ -1,8 +1,65 @@
 <!DOCTYPE html>
 <html>
 <title> liky friends </title>
-<body>
-    <head> here are my friends❤️❤️❤️ </head>
+<body onLoad="goforit()">
+   <marquee> <strong>  here are my friends❤️ ❤️ ❤️ </strong> </marquee>  
+    <div> <h2> moods as of:</h2> <script>
+
+        /*
+        Live Date Script- 
+        (c) Dynamic Drive (www.dynamicdrive.com)
+        For full source code, installation instructions, 100's more DHTML scripts, and Terms Of Use,
+        visit http://www.dynamicdrive.com
+        */
+
+
+        var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+        var montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+        function getthedate() {
+                var mydate = new Date()
+                var year = mydate.getYear()
+                if (year < 1000)
+                        year += 1900
+                var day = mydate.getDay()
+                var month = mydate.getMonth()
+                var daym = mydate.getDate()
+                if (daym < 10)
+                        daym = "0" + daym
+                var hours = mydate.getHours()
+                var minutes = mydate.getMinutes()
+                var seconds = mydate.getSeconds()
+                var dn = "AM"
+                if (hours >= 12)
+                        dn = "PM"
+                if (hours > 12) {
+                        hours = hours - 12
+                }
+                if (hours == 0)
+                        hours = 12
+                if (minutes <= 9)
+                        minutes = "0" + minutes
+                if (seconds <= 9)
+                        seconds = "0" + seconds
+                //change font size here
+                var cdate = "<mediuml><font color='000000' face='serif'><b>" + dayarray[day] + ", " + montharray[month] + " " + daym + ", " + year + " " + hours + ":" + minutes + ":" + seconds + " " + dn
+                        + "</b></font></medium>"
+                if (document.all)
+                        document.all.clock.innerHTML = cdate
+                else if (document.getElementById)
+                        document.getElementById("clock").innerHTML = cdate
+                else
+                        document.write(cdate)
+        }
+        if (!document.all && !document.getElementById)
+                getthedate()
+        function goforit() {
+                if (document.all || document.getElementById)
+                        setInterval("getthedate()", 1000)
+        }
+
+</script>
+<span id="clock"></span> </div>
     <div>
         <h1> this is how i (liky) am feeling right now</h1>
         <a href="https://www.imood.com/users/m0thgvts"><img
@@ -17,9 +74,9 @@
         </div>
         <div>
             <h1> my fantastic friend ella's mood also</h1>
-            <a href="https://www.imood.com/users/ellapowell"><img
-                    src="https://moods.imood.com/display/uname-ellapowell/fg-57644/trans-1/imood.gif"
-                    alt="The current mood of ellapowell at www.imood.com" border="0" style="height: 30px; width: auto;"></a>
+        <a href="https://www.imood.com/users/ellapowell"><img
+                        src="https://moods.imood.com/display/uname-ellapowell/fg-57644/trans-1/imood.gif"
+                        alt="The current mood of ellapowell at www.imood.com" border="0" style="height: 30px; width: auto;"></a>
         </div>
         <div>
             <h1> how ever could my great friend sarah be feeling right now?</h1>
@@ -27,6 +84,9 @@
                     src="https://moods.imood.com/display/uname-sarahtwiddy/fg-57644/trans-1/imood.gif"
                     alt="The current mood of sarahtwiddy at www.imood.com" border="0"
                     style="height: 30px; width: auto;"></a>
+        </div>
+        <div>
+                <a href="/Users/lilianabreitinger/Desktop/m0thgvts.github.io/index.html "> return </a>
         </div>
 </body>
 </html>
