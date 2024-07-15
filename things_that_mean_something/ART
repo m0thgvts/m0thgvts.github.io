@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<title> artsy stuff  </title>
 
-<head> here are my creative little hobbies for whichever mood i may be in </head>
+
+<head> <title> artsy stuff  </title> 
+  </head>
 
 <body>
+    <h1> AAAAAA </h1>
     <div>
         <a href="../index.html"> return to home</a>
     </div>
 </body>
-
-</html>
